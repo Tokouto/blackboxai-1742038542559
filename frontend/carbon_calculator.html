@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Calculator - Rolsa Technologies</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .progress-bar {
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/" class="text-2xl font-bold text-green-600">Rolsa</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="/" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="/products.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Products</a>
+                        <a href="/consultations.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Consultations</a>
+                        <a href="/carbon_calculator.html" class="border-green-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Carbon Calculator</a>
+                        <a href="/loyalty.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Rewards</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="/account.html" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                        <i class="fas fa-user"></i> Account
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Calculator Header -->
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                    <span class="block">Calculate Your</span>
+                    <span class="block text-green-600">Carbon Footprint</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    Understand your environmental impact and get personalized recommendations for reducing your carbon footprint.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculator Form -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <form id="carbonCalculator" class="space-y-6">
+                <!-- Energy Usage Section -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">
+                        <i class="fas fa-bolt text-green-600 mr-2"></i>Energy Usage
+                    </h3>
+                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Electricity Usage (kWh/month)</label>
+                            <input type="number" name="electricity" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Natural Gas Usage (m³/month)</label>
+                            <input type="number" name="gas" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transportation Section -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">
+                        <i class="fas fa-car text-green-600 mr-2"></i>Transportation
+                    </h3>
+                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Vehicle Miles (per week)</label>
+                            <input type="number" name="vehicle" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Public Transport Miles (per week)</label>
+                            <input type="number" name="public_transport" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Air Travel Miles (per year)</label>
+                            <input type="number" name="air_travel" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Waste Section -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">
+                        <i class="fas fa-trash text-green-600 mr-2"></i>Waste
+                    </h3>
+                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Recycled Waste (kg/week)</label>
+                            <input type="number" name="recycled" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Landfill Waste (kg/week)</label>
+                            <input type="number" name="landfill" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700">
+                    Calculate Carbon Footprint
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Results Section (Hidden by default) -->
+    <div id="results" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Carbon Footprint Results</h2>
+            
+            <!-- Total Emissions -->
+            <div class="mb-8">
+                <h3 class="text-lg font-medium text-gray-900 mb-2">Total Annual Emissions</h3>
+                <div class="bg-gray-200 rounded-full h-4 mb-2">
+                    <div id="emissionsBar" class="progress-bar bg-green-600 h-4 rounded-full" style="width: 0%"></div>
+                </div>
+                <p id="totalEmissions" class="text-2xl font-bold text-green-600">0 kg CO₂e/year</p>
+            </div>
+
+            <!-- Breakdown -->
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3 mb-8">
+                <div class="text-center">
+                    <div class="text-green-600 mb-2">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h4 class="font-medium">Energy</h4>
+                    <p id="energyEmissions" class="text-lg font-bold">0 kg CO₂e</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-green-600 mb-2">
+                        <i class="fas fa-car text-3xl"></i>
+                    </div>
+                    <h4 class="font-medium">Transport</h4>
+                    <p id="transportEmissions" class="text-lg font-bold">0 kg CO₂e</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-green-600 mb-2">
+                        <i class="fas fa-trash text-3xl"></i>
+                    </div>
+                    <h4 class="font-medium">Waste</h4>
+                    <p id="wasteEmissions" class="text-lg font-bold">0 kg CO₂e</p>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-4">Recommendations</h3>
+                <ul id="recommendations" class="space-y-3">
+                    <!-- Recommendations will be populated dynamically -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1">
+                    <span class="text-2xl font-bold text-white">Rolsa</span>
+                    <p class="mt-2 text-gray-300 text-sm">Sustainable energy solutions for a better tomorrow.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/products.html" class="text-gray-300 hover:text-white">Products</a></li>
+                        <li><a href="/consultations.html" class="text-gray-300 hover:text-white">Consultations</a></li>
+                        <li><a href="/carbon_calculator.html" class="text-gray-300 hover:text-white">Carbon Calculator</a></li>
+                        <li><a href="/loyalty.html" class="text-gray-300 hover:text-white">Rewards Program</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300"><i class="fas fa-envelope mr-2"></i> info@rolsa.com</li>
+                        <li class="text-gray-300"><i class="fas fa-phone mr-2"></i> (555) 123-4567</li>
+                        <li class="text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i> 123 Green Street</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8">
+                <p class="text-gray-300 text-sm text-center">&copy; 2024 Rolsa Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('carbonCalculator').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const electricity = parseFloat(this.electricity.value) || 0;
+            const gas = parseFloat(this.gas.value) || 0;
+            const vehicle = parseFloat(this.vehicle.value) || 0;
+            const publicTransport = parseFloat(this.public_transport.value) || 0;
+            const airTravel = parseFloat(this.air_travel.value) || 0;
+            const recycled = parseFloat(this.recycled.value) || 0;
+            const landfill = parseFloat(this.landfill.value) || 0;
+
+            // Calculate emissions (simplified example)
+            const energyEmissions = (electricity * 0.5 + gas * 2.0) * 12; // Annual
+            const transportEmissions = (vehicle * 0.4 + publicTransport * 0.14) * 52 + airTravel * 0.25;
+            const wasteEmissions = (landfill * 0.5 - recycled * 0.1) * 52; // Annual
+
+            const totalEmissions = energyEmissions + transportEmissions + wasteEmissions;
+
+            // Update results
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('totalEmissions').textContent = `${Math.round(totalEmissions)} kg CO₂e/year`;
+            document.getElementById('energyEmissions').textContent = `${Math.round(energyEmissions)} kg CO₂e`;
+            document.getElementById('transportEmissions').textContent = `${Math.round(transportEmissions)} kg CO₂e`;
+            document.getElementById('wasteEmissions').textContent = `${Math.round(wasteEmissions)} kg CO₂e`;
+
+            // Update progress bar (assuming 20,000 kg as maximum)
+            const percentage = Math.min((totalEmissions / 20000) * 100, 100);
+            document.getElementById('emissionsBar').style.width = `${percentage}%`;
+
+            // Generate recommendations
+            const recommendations = [];
+            if (electricity > 250) recommendations.push('Consider switching to energy-efficient appliances and LED lighting');
+            if (vehicle > 100) recommendations.push('Try carpooling or using public transportation for your daily commute');
+            if (landfill > 10) recommendations.push('Increase recycling and composting to reduce landfill waste');
+            if (gas > 100) recommendations.push('Improve home insulation to reduce heating needs');
+            if (airTravel > 5000) recommendations.push('Consider video conferencing instead of business travel when possible');
+
+            const recommendationsList = document.getElementById('recommendations');
+            recommendationsList.innerHTML = recommendations.map(rec => `
+                <li class="flex items-start">
+                    <span class="flex-shrink-0 h-6 w-6 text-green-600">
+                        <i class="fas fa-leaf"></i>
+                    </span>
+                    <span class="ml-3 text-gray-700">${rec}</span>
+                </li>
+            `).join('');
+
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
