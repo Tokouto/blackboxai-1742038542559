@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultations - Rolsa Technologies</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/" class="text-2xl font-bold text-green-600">Rolsa</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="/" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="/products.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Products</a>
+                        <a href="/consultations.html" class="border-green-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Consultations</a>
+                        <a href="/carbon_calculator.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Carbon Calculator</a>
+                        <a href="/loyalty.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Rewards</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="/account.html" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                        <i class="fas fa-user"></i> Account
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Consultation Header -->
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                    <span class="block">Expert Energy</span>
+                    <span class="block text-green-600">Consultations</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    Schedule a consultation with our energy experts to discover the best sustainable solutions for your needs.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consultation Types -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <!-- Residential Consultation -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-center mb-4">
+                    <i class="fas fa-home text-4xl text-green-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">Residential Consultation</h3>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Home energy assessment
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Solar panel recommendations
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Energy storage solutions
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Cost savings analysis
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <span class="block text-2xl font-bold text-gray-900 mb-4">$99</span>
+                    <button class="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Commercial Consultation -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-center mb-4">
+                    <i class="fas fa-building text-4xl text-green-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">Commercial Consultation</h3>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Business energy audit
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Commercial solar solutions
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        EV charging infrastructure
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        ROI analysis
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <span class="block text-2xl font-bold text-gray-900 mb-4">$199</span>
+                    <button class="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Industrial Consultation -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-center mb-4">
+                    <i class="fas fa-industry text-4xl text-green-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">Industrial Consultation</h3>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Industrial energy optimization
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Large-scale solar implementation
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Energy management systems
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Sustainability planning
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <span class="block text-2xl font-bold text-gray-900 mb-4">$499</span>
+                    <button class="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Schedule Your Consultation</h2>
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">First Name</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Last Name</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Phone</label>
+                    <input type="tel" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Consultation Type</label>
+                    <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        <option>Residential Consultation</option>
+                        <option>Commercial Consultation</option>
+                        <option>Industrial Consultation</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Preferred Date</label>
+                    <input type="date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700">
+                        Schedule Consultation
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1">
+                    <span class="text-2xl font-bold text-white">Rolsa</span>
+                    <p class="mt-2 text-gray-300 text-sm">Sustainable energy solutions for a better tomorrow.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/products.html" class="text-gray-300 hover:text-white">Products</a></li>
+                        <li><a href="/consultations.html" class="text-gray-300 hover:text-white">Consultations</a></li>
+                        <li><a href="/carbon_calculator.html" class="text-gray-300 hover:text-white">Carbon Calculator</a></li>
+                        <li><a href="/loyalty.html" class="text-gray-300 hover:text-white">Rewards Program</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300"><i class="fas fa-envelope mr-2"></i> info@rolsa.com</li>
+                        <li class="text-gray-300"><i class="fas fa-phone mr-2"></i> (555) 123-4567</li>
+                        <li class="text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i> 123 Green Street</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8">
+                <p class="text-gray-300 text-sm text-center">&copy; 2024 Rolsa Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
